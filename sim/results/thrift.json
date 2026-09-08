@@ -1,0 +1,327 @@
+[
+  {
+    "experiment": "thrift/银行节流 vs 稳打 (息×2/顶20)",
+    "seed": 22000,
+    "matches": 5000,
+    "sideA": "银行节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2396,
+      "losses": 2604,
+      "matches": 5000,
+      "winrate": 0.4792,
+      "eps": 0.0138,
+      "lo": 0.4654,
+      "hi": 0.493
+    },
+    "avgKillsPerDazhe": 0.856,
+    "avgDazhes": 4.3586,
+    "drawDazheRate": 0.0004,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 2,
+      "apCap": 20
+    },
+    "band": "平衡带"
+  },
+  {
+    "experiment": "thrift/对照·不盖节流 (息×2/顶20)",
+    "seed": 22001,
+    "matches": 5000,
+    "sideA": "银行不节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2024,
+      "losses": 2976,
+      "matches": 5000,
+      "winrate": 0.4048,
+      "eps": 0.0136,
+      "lo": 0.3912,
+      "hi": 0.4184
+    },
+    "avgKillsPerDazhe": 0.7533,
+    "avgDazhes": 4.3378,
+    "drawDazheRate": 0.0002,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 2,
+      "apCap": 20
+    },
+    "band": "偏弱"
+  },
+  {
+    "experiment": "thrift/银行节流 vs 稳打 (息×2/顶24)",
+    "seed": 22002,
+    "matches": 5000,
+    "sideA": "银行节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2829,
+      "losses": 2171,
+      "matches": 5000,
+      "winrate": 0.5658,
+      "eps": 0.0137,
+      "lo": 0.5521,
+      "hi": 0.5795
+    },
+    "avgKillsPerDazhe": 0.8149,
+    "avgDazhes": 4.2856,
+    "drawDazheRate": 0.0001,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 2,
+      "apCap": 24
+    },
+    "band": "偏强"
+  },
+  {
+    "experiment": "thrift/对照·不盖节流 (息×2/顶24)",
+    "seed": 22003,
+    "matches": 5000,
+    "sideA": "银行不节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2030,
+      "losses": 2970,
+      "matches": 5000,
+      "winrate": 0.406,
+      "eps": 0.0136,
+      "lo": 0.3924,
+      "hi": 0.4196
+    },
+    "avgKillsPerDazhe": 0.7572,
+    "avgDazhes": 4.3458,
+    "drawDazheRate": 0.0001,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 2,
+      "apCap": 24
+    },
+    "band": "偏弱"
+  },
+  {
+    "experiment": "thrift/银行节流 vs 稳打 (息×2.5/顶20)",
+    "seed": 22004,
+    "matches": 5000,
+    "sideA": "银行节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2393,
+      "losses": 2607,
+      "matches": 5000,
+      "winrate": 0.4786,
+      "eps": 0.0138,
+      "lo": 0.4648,
+      "hi": 0.4924
+    },
+    "avgKillsPerDazhe": 0.8594,
+    "avgDazhes": 4.3776,
+    "drawDazheRate": 0.0001,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 2.5,
+      "apCap": 20
+    },
+    "band": "平衡带"
+  },
+  {
+    "experiment": "thrift/对照·不盖节流 (息×2.5/顶20)",
+    "seed": 22005,
+    "matches": 5000,
+    "sideA": "银行不节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2027,
+      "losses": 2973,
+      "matches": 5000,
+      "winrate": 0.4054,
+      "eps": 0.0136,
+      "lo": 0.3918,
+      "hi": 0.419
+    },
+    "avgKillsPerDazhe": 0.7617,
+    "avgDazhes": 4.3542,
+    "drawDazheRate": 0.0001,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 2.5,
+      "apCap": 20
+    },
+    "band": "偏弱"
+  },
+  {
+    "experiment": "thrift/银行节流 vs 稳打 (息×2.5/顶24)",
+    "seed": 22006,
+    "matches": 5000,
+    "sideA": "银行节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 3111,
+      "losses": 1889,
+      "matches": 5000,
+      "winrate": 0.6222,
+      "eps": 0.0134,
+      "lo": 0.6088,
+      "hi": 0.6356
+    },
+    "avgKillsPerDazhe": 0.8497,
+    "avgDazhes": 4.3516,
+    "drawDazheRate": 0.0001,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 2.5,
+      "apCap": 24
+    },
+    "band": "偏强"
+  },
+  {
+    "experiment": "thrift/对照·不盖节流 (息×2.5/顶24)",
+    "seed": 22007,
+    "matches": 5000,
+    "sideA": "银行不节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2065,
+      "losses": 2935,
+      "matches": 5000,
+      "winrate": 0.413,
+      "eps": 0.0136,
+      "lo": 0.3994,
+      "hi": 0.4266
+    },
+    "avgKillsPerDazhe": 0.7576,
+    "avgDazhes": 4.3552,
+    "drawDazheRate": 0.0002,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 2.5,
+      "apCap": 24
+    },
+    "band": "偏弱"
+  },
+  {
+    "experiment": "thrift/银行节流 vs 稳打 (息×3/顶20)",
+    "seed": 22008,
+    "matches": 5000,
+    "sideA": "银行节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2376,
+      "losses": 2624,
+      "matches": 5000,
+      "winrate": 0.4752,
+      "eps": 0.0138,
+      "lo": 0.4614,
+      "hi": 0.489
+    },
+    "avgKillsPerDazhe": 0.8473,
+    "avgDazhes": 4.3556,
+    "drawDazheRate": 0.0003,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 3,
+      "apCap": 20
+    },
+    "band": "平衡带"
+  },
+  {
+    "experiment": "thrift/对照·不盖节流 (息×3/顶20)",
+    "seed": 22009,
+    "matches": 5000,
+    "sideA": "银行不节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2025,
+      "losses": 2975,
+      "matches": 5000,
+      "winrate": 0.405,
+      "eps": 0.0136,
+      "lo": 0.3914,
+      "hi": 0.4186
+    },
+    "avgKillsPerDazhe": 0.7571,
+    "avgDazhes": 4.3664,
+    "drawDazheRate": 0.0004,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 3,
+      "apCap": 20
+    },
+    "band": "偏弱"
+  },
+  {
+    "experiment": "thrift/银行节流 vs 稳打 (息×3/顶24)",
+    "seed": 22010,
+    "matches": 5000,
+    "sideA": "银行节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 3047,
+      "losses": 1953,
+      "matches": 5000,
+      "winrate": 0.6094,
+      "eps": 0.0135,
+      "lo": 0.5959,
+      "hi": 0.6229
+    },
+    "avgKillsPerDazhe": 0.8476,
+    "avgDazhes": 4.3412,
+    "drawDazheRate": 0.0002,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 3,
+      "apCap": 24
+    },
+    "band": "偏强"
+  },
+  {
+    "experiment": "thrift/对照·不盖节流 (息×3/顶24)",
+    "seed": 22011,
+    "matches": 5000,
+    "sideA": "银行不节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2082,
+      "losses": 2918,
+      "matches": 5000,
+      "winrate": 0.4164,
+      "eps": 0.0137,
+      "lo": 0.4027,
+      "hi": 0.4301
+    },
+    "avgKillsPerDazhe": 0.7622,
+    "avgDazhes": 4.3706,
+    "drawDazheRate": 0.0001,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 3,
+      "apCap": 24
+    },
+    "band": "偏弱"
+  },
+  {
+    "experiment": "thrift/定稿组·银行节流 vs 稳打 (息×2/顶20, 2万局)",
+    "seed": 22999,
+    "matches": 20000,
+    "sideA": "银行节流",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 9844,
+      "losses": 10156,
+      "matches": 20000,
+      "winrate": 0.4922,
+      "eps": 0.0069,
+      "lo": 0.4853,
+      "hi": 0.4991
+    },
+    "avgKillsPerDazhe": 0.8511,
+    "avgDazhes": 4.3723,
+    "drawDazheRate": 0.0003,
+    "rules": {
+      "apCarry": 1.5,
+      "apCarryThrift": 2,
+      "apCap": 20
+    },
+    "band": "平衡带"
+  }
+]

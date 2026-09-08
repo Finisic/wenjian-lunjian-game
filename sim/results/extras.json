@@ -1,0 +1,247 @@
+[
+  {
+    "experiment": "extra/叫阵+30% vs 无卡",
+    "seed": 44000,
+    "matches": 5000,
+    "sideA": "叫阵+30%",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 3683,
+      "losses": 1317,
+      "matches": 5000,
+      "winrate": 0.7366,
+      "eps": 0.0122,
+      "lo": 0.7244,
+      "hi": 0.7488
+    },
+    "avgKillsPerDazhe": 1.0155,
+    "avgDazhes": 4.0258,
+    "drawDazheRate": 0.0005,
+    "rules": {
+      "jiaozhenBoost": 0.3
+    }
+  },
+  {
+    "experiment": "extra/叫阵+40% vs 无卡",
+    "seed": 44001,
+    "matches": 5000,
+    "sideA": "叫阵+40%",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 4079,
+      "losses": 921,
+      "matches": 5000,
+      "winrate": 0.8158,
+      "eps": 0.0107,
+      "lo": 0.8051,
+      "hi": 0.8265
+    },
+    "avgKillsPerDazhe": 1.0244,
+    "avgDazhes": 3.9328,
+    "drawDazheRate": 0.0006,
+    "rules": {
+      "jiaozhenBoost": 0.4
+    }
+  },
+  {
+    "experiment": "extra/叫阵+50% vs 无卡",
+    "seed": 44002,
+    "matches": 5000,
+    "sideA": "叫阵+50%",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 4354,
+      "losses": 646,
+      "matches": 5000,
+      "winrate": 0.8708,
+      "eps": 0.0093,
+      "lo": 0.8615,
+      "hi": 0.8801
+    },
+    "avgKillsPerDazhe": 1.0293,
+    "avgDazhes": 3.8208,
+    "drawDazheRate": 0.0006,
+    "rules": {
+      "jiaozhenBoost": 0.5
+    }
+  },
+  {
+    "experiment": "extra/叫阵+60% vs 无卡",
+    "seed": 44003,
+    "matches": 5000,
+    "sideA": "叫阵+60%",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 4557,
+      "losses": 443,
+      "matches": 5000,
+      "winrate": 0.9114,
+      "eps": 0.0079,
+      "lo": 0.9035,
+      "hi": 0.9193
+    },
+    "avgKillsPerDazhe": 1.0289,
+    "avgDazhes": 3.7434,
+    "drawDazheRate": 0.0006,
+    "rules": {
+      "jiaozhenBoost": 0.6
+    }
+  },
+  {
+    "experiment": "extra/全肉(不用功能绝技) vs 稳打",
+    "seed": 44004,
+    "matches": 5000,
+    "sideA": "全肉(丙丁优先)",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 3360,
+      "losses": 1640,
+      "matches": 5000,
+      "winrate": 0.672,
+      "eps": 0.013,
+      "lo": 0.659,
+      "hi": 0.685
+    },
+    "avgKillsPerDazhe": 1.0797,
+    "avgDazhes": 4.099,
+    "drawDazheRate": 0.0009
+  },
+  {
+    "experiment": "extra/全肉(每大局一次嘲讽) vs 稳打",
+    "seed": 44005,
+    "matches": 5000,
+    "sideA": "全肉(丙丁优先)",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 449,
+      "losses": 4551,
+      "matches": 5000,
+      "winrate": 0.0898,
+      "eps": 0.0079,
+      "lo": 0.0819,
+      "hi": 0.0977
+    },
+    "avgKillsPerDazhe": 0.6345,
+    "avgDazhes": 3.741,
+    "drawDazheRate": 0.0002
+  },
+  {
+    "experiment": "extra/换位闪避镜像",
+    "seed": 44006,
+    "matches": 5000,
+    "sideA": "闪避A",
+    "sideB": "闪避B",
+    "a": {
+      "wins": 2513,
+      "losses": 2487,
+      "matches": 5000,
+      "winrate": 0.5026,
+      "eps": 0.0139,
+      "lo": 0.4887,
+      "hi": 0.5165
+    },
+    "avgKillsPerDazhe": 0.0002,
+    "avgDazhes": 4.1444,
+    "drawDazheRate": 0.0021
+  },
+  {
+    "experiment": "extra/全肉[坦克血量1200] vs 稳打",
+    "seed": 44007,
+    "matches": 5000,
+    "sideA": "全肉(丙丁优先)",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 3269,
+      "losses": 1731,
+      "matches": 5000,
+      "winrate": 0.6538,
+      "eps": 0.0132,
+      "lo": 0.6406,
+      "hi": 0.667
+    },
+    "avgKillsPerDazhe": 1.0904,
+    "avgDazhes": 4.1014,
+    "drawDazheRate": 0.001,
+    "note": "ROSTER补丁：丙/丁 hp 1300→1200"
+  },
+  {
+    "experiment": "extra/全肉[坦克攻击-15%] vs 稳打",
+    "seed": 44008,
+    "matches": 5000,
+    "sideA": "全肉(丙丁优先)",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 3113,
+      "losses": 1887,
+      "matches": 5000,
+      "winrate": 0.6226,
+      "eps": 0.0134,
+      "lo": 0.6092,
+      "hi": 0.636
+    },
+    "avgKillsPerDazhe": 1.0451,
+    "avgDazhes": 4.1122,
+    "drawDazheRate": 0.0008,
+    "note": "ROSTER补丁：丙/丁攻击 135~203→128~191（基准150~225的-15%）"
+  },
+  {
+    "experiment": "extra/全肉[坦克攻击-17%] vs 稳打",
+    "seed": 44009,
+    "matches": 5000,
+    "sideA": "全肉(丙丁优先)",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 3036,
+      "losses": 1964,
+      "matches": 5000,
+      "winrate": 0.6072,
+      "eps": 0.0135,
+      "lo": 0.5937,
+      "hi": 0.6207
+    },
+    "avgKillsPerDazhe": 1.022,
+    "avgDazhes": 4.1034,
+    "drawDazheRate": 0.0011,
+    "note": "ROSTER补丁：丙/丁攻击 135~203→125~187（基准150~225的-17%）"
+  },
+  {
+    "experiment": "extra/全肉[坦克攻击-23.5%] vs 稳打",
+    "seed": 55000,
+    "matches": 5000,
+    "sideA": "全肉(丙丁优先)",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2696,
+      "losses": 2304,
+      "matches": 5000,
+      "winrate": 0.5392,
+      "eps": 0.0138,
+      "lo": 0.5254,
+      "hi": 0.553
+    },
+    "avgKillsPerDazhe": 0.9556,
+    "avgDazhes": 4.1458,
+    "drawDazheRate": 0.001,
+    "note": "ROSTER补丁：丙/丁攻击 135~203→115~173（现行面板×0.85，对基准150~225合计约-23.5%）"
+  },
+  {
+    "experiment": "extra/全肉[坦克攻击-25.4%] vs 稳打",
+    "seed": 55001,
+    "matches": 5000,
+    "sideA": "全肉(丙丁优先)",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2562,
+      "losses": 2438,
+      "matches": 5000,
+      "winrate": 0.5124,
+      "eps": 0.0139,
+      "lo": 0.4985,
+      "hi": 0.5263
+    },
+    "avgKillsPerDazhe": 0.9292,
+    "avgDazhes": 4.1366,
+    "drawDazheRate": 0.0009,
+    "note": "ROSTER补丁：丙/丁攻击 135~203→112~168（现行面板×0.83，对基准150~225合计约-25.4%）"
+  }
+]
