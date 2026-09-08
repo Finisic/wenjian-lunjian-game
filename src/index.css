@@ -1,0 +1,446 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   视觉系统：宣纸水墨
+   纸: #f3eee0  墨: #211d16  朱砂: #a63a2b  淡墨: #6b655a  金: #b3893a
+   ============================================================ */
+:root {
+  --paper: #f3eee0;
+  --paper-deep: #eae3cf;
+  --ink: #211d16;
+  --ink-soft: #4a443a;
+  --ink-faint: #8a8272;
+  --cinnabar: #a63a2b;
+  --cinnabar-deep: #8c2f22;
+  --gold: #b3893a;
+  /* 底部导航高度 + 安全区，供主区域留白 */
+  --nav-h: calc(56px + env(safe-area-inset-bottom, 0px));
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  /* 宣纸质感：细网格（草稿纸隐喻）+ 低饱和双层噪点（纸纤维），纯 CSS 无外部图片 */
+  background-image:
+    radial-gradient(rgba(33, 29, 22, 0.05) 0.8px, transparent 0.9px),
+    radial-gradient(rgba(179, 137, 58, 0.045) 0.8px, transparent 0.9px),
+    linear-gradient(rgba(33, 29, 22, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(33, 29, 22, 0.04) 1px, transparent 1px);
+  background-size: 7px 7px, 13px 13px, 44px 44px, 44px 44px;
+  background-position: 0 0, 4px 7px, 0 0, 0 0;
+}
+
+/* 做旧边缘：四角极淡的茶渍晕染，低饱和、不喧宾夺主 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(120vmax 60vmax at 50% 50%, transparent 62%, rgba(122, 96, 54, 0.06) 88%, rgba(96, 72, 40, 0.1) 100%);
+}
+#root { position: relative; z-index: 1; }
+
+.font-display {
+  font-family: "Kaiti SC", "STKaiti", "KaiTi", "Noto Serif SC", "Songti SC", serif;
+  letter-spacing: 0.18em;
+}
+
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* 手札面板：细墨线边框 + 纸色 + 纤维噪点 + 做旧内沿 */
+.paper-panel {
+  background-color: rgba(255, 253, 246, 0.72);
+  background-image:
+    radial-gradient(rgba(33, 29, 22, 0.035) 0.7px, transparent 0.8px),
+    radial-gradient(rgba(179, 137, 58, 0.03) 0.7px, transparent 0.8px);
+  background-size: 9px 9px, 15px 15px;
+  background-position: 1px 2px, 6px 9px;
+  border: 1px solid var(--ink);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 253, 246, 0.4),
+    inset 0 0 18px rgba(122, 96, 54, 0.05),
+    0 1px 0 rgba(33, 29, 22, 0.08);
+}
+
+/* 印章标签 */
+.seal {
+  display: inline-block;
+  background: var(--cinnabar);
+  color: #f7f2e4;
+  font-family: "Kaiti SC", "STKaiti", "KaiTi", serif;
+  padding: 2px 8px;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+}
+
+/* 朱砂落款章：章节标题旁的小方印 */
+.seal-stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 3px;
+  background: var(--cinnabar);
+  color: #f7f2e4;
+  font-family: "Kaiti SC", "STKaiti", "KaiTi", serif;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0;
+  border-radius: 3px;
+  transform: rotate(-3deg);
+  box-shadow: 0 1px 2px rgba(140, 47, 34, 0.35), inset 0 0 3px rgba(247, 242, 228, 0.35);
+  user-select: none;
+}
+.seal-stamp.gold { background: var(--gold); box-shadow: 0 1px 2px rgba(179, 137, 58, 0.35), inset 0 0 3px rgba(247, 242, 228, 0.35); }
+
+/* 状态印记：印章式小徽章（tooltip 用 data-tip） */
+.seal-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  font-family: "Kaiti SC", "STKaiti", "KaiTi", serif;
+  font-size: 12px;
+  line-height: 1;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  background: rgba(255, 253, 246, 0.6);
+  cursor: help;
+  box-shadow: inset 0 0 3px rgba(33, 29, 22, 0.12);
+}
+.seal-badge::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(2px);
+  min-width: 120px;
+  max-width: 200px;
+  width: max-content;
+  padding: 5px 8px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: -apple-system, "PingFang SC", sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  white-space: pre-line;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 30;
+}
+.seal-badge::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: var(--ink);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 30;
+  pointer-events: none;
+}
+.seal-badge:hover::after, .seal-badge:focus-visible::after, .seal-badge.tip-on::after,
+.seal-badge:hover::before, .seal-badge:focus-visible::before, .seal-badge.tip-on::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+.seal-badge:hover::before, .seal-badge:focus-visible::before, .seal-badge.tip-on::before { transform: translateX(-50%); }
+
+/* 墨线按钮 */
+.btn-ink {
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  transition: all 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+  font-weight: 600;
+  /* 移动端可点目标 ≥44px */
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-ink:hover:not(:disabled) { background: var(--ink); color: var(--paper); }
+.btn-ink:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.btn-cinnabar {
+  border: 1.5px solid var(--cinnabar);
+  background: var(--cinnabar);
+  color: #f7f2e4;
+  transition: all 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-cinnabar:hover:not(:disabled) { background: var(--cinnabar-deep); border-color: var(--cinnabar-deep); }
+.btn-cinnabar:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* 虚线分隔 */
+.dashed-divider { border-top: 1px dashed rgba(33, 29, 22, 0.35); }
+
+/* 战斗场景：墨色舞台 */
+.battle-stage {
+  background: linear-gradient(180deg, #2a261e 0%, #1d1a14 100%);
+  color: #efe8d5;
+}
+
+/* ============ 动画库（节奏克制，全部 ease-out 短促） ============ */
+
+/* 飘字：基准（仅动画；定位由使用方给，Battle.tsx 依赖此约定） */
+@keyframes floatDmg {
+  0% { opacity: 0; transform: translateY(8px) scale(0.8); }
+  15% { opacity: 1; transform: translateY(0) scale(1.12); }
+  100% { opacity: 0; transform: translateY(-46px) scale(1); }
+}
+.dmg-float {
+  animation: floatDmg 0.95s ease-out forwards;
+  pointer-events: none;
+  white-space: nowrap;
+  max-width: 92vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 按判定类型分色分大小 */
+.dmg-god {  /* 神妙：金光大字 */
+  font-family: "Kaiti SC", "STKaiti", "KaiTi", serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(179, 137, 58, 0.75), 0 0 3px rgba(243, 238, 224, 0.9);
+  animation-duration: 1.25s;
+}
+.dmg-crit { /* 致命：朱砂 */
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cinnabar);
+  text-shadow: 0 0 6px rgba(243, 238, 224, 0.9);
+  animation-duration: 1.05s;
+}
+.dmg-hit {  /* 命中：墨色常字 */
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  text-shadow: 0 0 6px rgba(243, 238, 224, 0.9);
+}
+.dmg-graze { /* 擦碰：灰小字 */
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-faint);
+  text-shadow: 0 0 5px rgba(243, 238, 224, 0.85);
+  animation-duration: 0.8s;
+}
+.dmg-heal {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  text-shadow: 0 0 6px rgba(243, 238, 224, 0.9);
+}
+
+/* 战报逐条回放：淡入 + 左移 */
+@keyframes logLine {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.log-line { animation: logLine 0.32s ease-out both; }
+
+/* 翻牌：盖牌 → 翻开（双面卡） */
+.flip-card { perspective: 640px; }
+.flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: flipOpen 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flip-front { transform: rotateY(180deg); }
+.flip-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Kaiti SC", "STKaiti", "KaiTi", serif;
+  letter-spacing: 0.3em;
+  border-radius: 2px;
+}
+@keyframes flipOpen {
+  0% { transform: rotateY(0deg); }
+  55% { transform: rotateY(198deg); }
+  100% { transform: rotateY(180deg); }
+}
+
+/* 封盘/夺魁横幅：印章盖下 */
+@keyframes stampIn {
+  0% { opacity: 0; transform: scale(1.7) rotate(-9deg); }
+  55% { opacity: 1; transform: scale(0.94) rotate(-2.5deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-2.5deg); }
+}
+.banner-stamp { animation: stampIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* 比分星标落子 */
+@keyframes stonePop {
+  0% { transform: scale(0.2); opacity: 0; }
+  60% { transform: scale(1.35); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.stone-pop { animation: stonePop 0.45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* 页签切换淡入 */
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-enter { animation: pageIn 0.26s ease-out both; }
+
+/* 通用浮上（面板入场、引导步骤切换） */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise-in { animation: riseIn 0.3s ease-out both; }
+
+/* 血条/韧性条过渡 */
+.bar-fill { transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* 抽卡稀有度闪烁 */
+@keyframes pullGlow {
+  0% { box-shadow: 0 0 0 0 rgba(179, 137, 58, 0.7); }
+  100% { box-shadow: 0 0 24px 8px rgba(179, 137, 58, 0); }
+}
+.pull-5 { animation: pullGlow 1.2s ease-out 3; border-color: var(--gold) !important; }
+
+@keyframes pullIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.92); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.pull-in { animation: pullIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* 引导步骤高亮描边 */
+.guide-active {
+  outline: 2px solid var(--cinnabar);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(166, 58, 43, 0.08);
+}
+
+/* 滑杆：加大触控区 */
+input[type="range"].slider-ink {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 44px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"].slider-ink::-webkit-slider-runnable-track {
+  height: 3px;
+  background: rgba(33, 29, 22, 0.25);
+  border-radius: 2px;
+}
+input[type="range"].slider-ink::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -8.5px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--cinnabar);
+}
+input[type="range"].slider-ink::-moz-range-track {
+  height: 3px;
+  background: rgba(33, 29, 22, 0.25);
+  border-radius: 2px;
+}
+input[type="range"].slider-ink::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--cinnabar);
+}
+
+/* ============ 移动端适配 ============ */
+
+/* 底部导航安全区 */
+.nav-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+/* 横屏提示（低矮横屏不便于三槽位操作） */
+.landscape-hint { display: none; }
+@media (orientation: landscape) and (max-height: 480px) {
+  .landscape-hint {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    justify-content: center;
+    padding: 6px 12px;
+    background: rgba(33, 29, 22, 0.92);
+    color: var(--paper);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+  }
+}
+
+/* 窄屏（≤380px）：战斗卡收紧，三槽位不溢出 */
+@media (max-width: 380px) {
+  .fighter-card { padding-left: 4px !important; padding-right: 4px !important; }
+  .fighter-card .font-display { letter-spacing: 0.05em; }
+  .dmg-god { font-size: 22px; }
+  .dmg-crit { font-size: 18px; }
+}
+
+/* 尊重系统减动效偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .dmg-float, .log-line, .flip-inner, .banner-stamp, .stone-pop,
+  .page-enter, .rise-in, .pull-in, .pull-5 {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* 滚动条：细墨条 */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(33, 29, 22, 0.35); border-radius: 10px; }
+
+/* 回纹分隔带：CSS 几何纹样，低饱和墨色，用于章节间装饰分隔 */
+.huiwen-divider {
+  height: 12px;
+  margin: 2px 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='12' viewBox='0 0 24 12'%3E%3Cpath d='M2 10 V4 H10 V8 H6 V6 M14 10 V2 H22' fill='none' stroke='%23211d16' stroke-opacity='0.22' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+  opacity: 0.8;
+}
+
+/* 山峦剪影：低饱和暖灰远山，用于页首/面板角落装饰 */
+.mtn-silhouette {
+  height: 40px;
+  margin-top: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='40' viewBox='0 0 240 40'%3E%3Cpath d='M0 40 L30 18 L48 30 L78 8 L104 26 L128 14 L156 32 L182 10 L210 28 L240 16 V40 Z' fill='%23211d16' fill-opacity='0.07'/%3E%3Cpath d='M0 40 L42 26 L70 34 L110 20 L150 36 L196 22 L240 34 V40 Z' fill='%23b3893a' fill-opacity='0.08'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  pointer-events: none;
+}
