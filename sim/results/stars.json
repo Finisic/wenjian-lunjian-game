@@ -1,0 +1,224 @@
+[
+  {
+    "experiment": "star/合成 vs 双上 · 甲",
+    "char": "甲",
+    "seed": 63002,
+    "matches": 20000,
+    "a": {
+      "wins": 9480,
+      "losses": 10520,
+      "matches": 20000,
+      "winrate": 0.474,
+      "eps": 0.0069,
+      "lo": 0.4671,
+      "hi": 0.4809
+    },
+    "band": "平衡带",
+    "pairDazheRate": 0.6029,
+    "tripleDazheRate": 0.0294,
+    "wrWhenPaired": {
+      "wins": 5840,
+      "losses": 6330,
+      "matches": 12170,
+      "winrate": 0.4799,
+      "eps": 0.0089,
+      "lo": 0.471,
+      "hi": 0.4887
+    },
+    "wrWhenUnpaired": {
+      "wins": 3640,
+      "losses": 4190,
+      "matches": 7830,
+      "winrate": 0.4649,
+      "eps": 0.011,
+      "lo": 0.4538,
+      "hi": 0.4759
+    },
+    "avgKillsPerDazhe": 1.0216
+  },
+  {
+    "experiment": "star/合成 vs 双上 · 乙",
+    "char": "乙",
+    "seed": 53057,
+    "matches": 20000,
+    "a": {
+      "wins": 9869,
+      "losses": 10131,
+      "matches": 20000,
+      "winrate": 0.4935,
+      "eps": 0.0069,
+      "lo": 0.4865,
+      "hi": 0.5004
+    },
+    "band": "平衡带",
+    "pairDazheRate": 0.6002,
+    "tripleDazheRate": 0.0296,
+    "wrWhenPaired": {
+      "wins": 5984,
+      "losses": 5980,
+      "matches": 11964,
+      "winrate": 0.5002,
+      "eps": 0.009,
+      "lo": 0.4912,
+      "hi": 0.5091
+    },
+    "wrWhenUnpaired": {
+      "wins": 3885,
+      "losses": 4151,
+      "matches": 8036,
+      "winrate": 0.4834,
+      "eps": 0.0109,
+      "lo": 0.4725,
+      "hi": 0.4944
+    },
+    "avgKillsPerDazhe": 1.0172
+  },
+  {
+    "experiment": "star/合成 vs 双上 · 丙",
+    "char": "丙",
+    "seed": 52993,
+    "matches": 20000,
+    "a": {
+      "wins": 9973,
+      "losses": 10027,
+      "matches": 20000,
+      "winrate": 0.4987,
+      "eps": 0.0069,
+      "lo": 0.4917,
+      "hi": 0.5056
+    },
+    "band": "平衡带",
+    "pairDazheRate": 0.6,
+    "tripleDazheRate": 0.0281,
+    "wrWhenPaired": {
+      "wins": 6110,
+      "losses": 5943,
+      "matches": 12053,
+      "winrate": 0.5069,
+      "eps": 0.0089,
+      "lo": 0.498,
+      "hi": 0.5159
+    },
+    "wrWhenUnpaired": {
+      "wins": 3863,
+      "losses": 4084,
+      "matches": 7947,
+      "winrate": 0.4861,
+      "eps": 0.011,
+      "lo": 0.4751,
+      "hi": 0.4971
+    },
+    "avgKillsPerDazhe": 1.0269
+  },
+  {
+    "experiment": "star/合成 vs 双上 · 丁",
+    "char": "丁",
+    "seed": 52969,
+    "matches": 20000,
+    "a": {
+      "wins": 10024,
+      "losses": 9976,
+      "matches": 20000,
+      "winrate": 0.5012,
+      "eps": 0.0069,
+      "lo": 0.4943,
+      "hi": 0.5081
+    },
+    "band": "平衡带",
+    "pairDazheRate": 0.6023,
+    "tripleDazheRate": 0.0289,
+    "wrWhenPaired": {
+      "wins": 6109,
+      "losses": 5973,
+      "matches": 12082,
+      "winrate": 0.5056,
+      "eps": 0.0089,
+      "lo": 0.4967,
+      "hi": 0.5145
+    },
+    "wrWhenUnpaired": {
+      "wins": 3915,
+      "losses": 4003,
+      "matches": 7918,
+      "winrate": 0.4944,
+      "eps": 0.011,
+      "lo": 0.4834,
+      "hi": 0.5055
+    },
+    "avgKillsPerDazhe": 1.0266
+  },
+  {
+    "experiment": "star/合成 vs 双上 · 戊",
+    "char": "戊",
+    "seed": 58098,
+    "matches": 20000,
+    "a": {
+      "wins": 10468,
+      "losses": 9532,
+      "matches": 20000,
+      "winrate": 0.5234,
+      "eps": 0.0069,
+      "lo": 0.5165,
+      "hi": 0.5303
+    },
+    "band": "平衡带",
+    "pairDazheRate": 0.6041,
+    "tripleDazheRate": 0.0295,
+    "wrWhenPaired": {
+      "wins": 6452,
+      "losses": 5683,
+      "matches": 12135,
+      "winrate": 0.5317,
+      "eps": 0.0089,
+      "lo": 0.5228,
+      "hi": 0.5406
+    },
+    "wrWhenUnpaired": {
+      "wins": 4016,
+      "losses": 3849,
+      "matches": 7865,
+      "winrate": 0.5106,
+      "eps": 0.011,
+      "lo": 0.4996,
+      "hi": 0.5217
+    },
+    "avgKillsPerDazhe": 1.0419
+  },
+  {
+    "experiment": "star/合成 vs 双上 · 己",
+    "char": "己",
+    "seed": 57049,
+    "matches": 20000,
+    "a": {
+      "wins": 10373,
+      "losses": 9627,
+      "matches": 20000,
+      "winrate": 0.5187,
+      "eps": 0.0069,
+      "lo": 0.5117,
+      "hi": 0.5256
+    },
+    "band": "平衡带",
+    "pairDazheRate": 0.6042,
+    "tripleDazheRate": 0.0289,
+    "wrWhenPaired": {
+      "wins": 6453,
+      "losses": 5726,
+      "matches": 12179,
+      "winrate": 0.5298,
+      "eps": 0.0089,
+      "lo": 0.521,
+      "hi": 0.5387
+    },
+    "wrWhenUnpaired": {
+      "wins": 3920,
+      "losses": 3901,
+      "matches": 7821,
+      "winrate": 0.5012,
+      "eps": 0.0111,
+      "lo": 0.4901,
+      "hi": 0.5123
+    },
+    "avgKillsPerDazhe": 1.0374
+  }
+]

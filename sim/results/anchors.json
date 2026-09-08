@@ -1,0 +1,233 @@
+[
+  {
+    "experiment": "anchor/镜像基线",
+    "seed": 11000,
+    "matches": 20000,
+    "sideA": "稳打A",
+    "sideB": "稳打B",
+    "a": {
+      "wins": 10183,
+      "losses": 9817,
+      "matches": 20000,
+      "winrate": 0.5092,
+      "eps": 0.0069,
+      "lo": 0.5022,
+      "hi": 0.5161
+    },
+    "avgKillsPerDazhe": 1.0302,
+    "avgDazhes": 4.1253,
+    "drawDazheRate": 0.0008,
+    "anchor": "历史 49.4%（镜像≈50%，大局均击杀1.69）",
+    "pass": true
+  },
+  {
+    "experiment": "anchor/挂机攒点 vs 稳打",
+    "seed": 11001,
+    "matches": 5000,
+    "sideA": "挂机攒点",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 1736,
+      "losses": 3264,
+      "matches": 5000,
+      "winrate": 0.3472,
+      "eps": 0.0132,
+      "lo": 0.334,
+      "hi": 0.3604
+    },
+    "avgKillsPerDazhe": 0.8354,
+    "avgDazhes": 4.3256,
+    "drawDazheRate": 0.0006,
+    "anchor": "历史 33.9%（空城流成立但不统治）",
+    "pass": true
+  },
+  {
+    "experiment": "anchor/全肉 vs 均衡",
+    "seed": 11002,
+    "matches": 5000,
+    "sideA": "全肉(丙丁优先)",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 3363,
+      "losses": 1637,
+      "matches": 5000,
+      "winrate": 0.6726,
+      "eps": 0.013,
+      "lo": 0.6596,
+      "hi": 0.6856
+    },
+    "avgKillsPerDazhe": 1.0771,
+    "avgDazhes": 4.068,
+    "drawDazheRate": 0.0007,
+    "anchor": "历史 43.9%（略低于50%）",
+    "pass": false
+  },
+  {
+    "experiment": "anchor/掣肘 vs 无卡",
+    "seed": 11003,
+    "matches": 5000,
+    "sideA": "稳打+掣肘",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2635,
+      "losses": 2365,
+      "matches": 5000,
+      "winrate": 0.527,
+      "eps": 0.0138,
+      "lo": 0.5132,
+      "hi": 0.5408
+    },
+    "avgKillsPerDazhe": 0.8278,
+    "avgDazhes": 4.1358,
+    "drawDazheRate": 0.0009,
+    "anchor": "历史 57.1%（1AP −20%攻击）",
+    "pass": false
+  },
+  {
+    "experiment": "anchor/神机妙算 vs 无卡",
+    "seed": 11004,
+    "matches": 5000,
+    "sideA": "稳打+神机",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 2671,
+      "losses": 2329,
+      "matches": 5000,
+      "winrate": 0.5342,
+      "eps": 0.0138,
+      "lo": 0.5204,
+      "hi": 0.548
+    },
+    "avgKillsPerDazhe": 1.0291,
+    "avgDazhes": 4.12,
+    "drawDazheRate": 0.0007,
+    "anchor": "历史 55.2%（0AP +5%神妙）",
+    "pass": true
+  },
+  {
+    "experiment": "anchor/叫阵 vs 无卡",
+    "seed": 11005,
+    "matches": 5000,
+    "sideA": "稳打+叫阵",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 4351,
+      "losses": 649,
+      "matches": 5000,
+      "winrate": 0.8702,
+      "eps": 0.0093,
+      "lo": 0.8609,
+      "hi": 0.8795
+    },
+    "avgKillsPerDazhe": 1.0248,
+    "avgDazhes": 3.8312,
+    "drawDazheRate": 0.0008,
+    "anchor": "历史 44.7%（1AP +50%攻击）",
+    "pass": false
+  },
+  {
+    "experiment": "anchor/拆招 vs 叫阵",
+    "seed": 11006,
+    "matches": 5000,
+    "sideA": "稳打+拆招",
+    "sideB": "稳打+叫阵",
+    "a": {
+      "wins": 2524,
+      "losses": 2476,
+      "matches": 5000,
+      "winrate": 0.5048,
+      "eps": 0.0139,
+      "lo": 0.4909,
+      "hi": 0.5187
+    },
+    "avgKillsPerDazhe": 0.7636,
+    "avgDazhes": 4.1384,
+    "drawDazheRate": 0.0005,
+    "anchor": "历史 49.8%（1AP换1AP对消均衡）",
+    "pass": true
+  },
+  {
+    "experiment": "anchor/乘势 vs 神机",
+    "seed": 11007,
+    "matches": 5000,
+    "sideA": "稳打+乘势",
+    "sideB": "稳打+神机",
+    "a": {
+      "wins": 3323,
+      "losses": 1677,
+      "matches": 5000,
+      "winrate": 0.6646,
+      "eps": 0.0131,
+      "lo": 0.6515,
+      "hi": 0.6777
+    },
+    "avgKillsPerDazhe": 1.0516,
+    "avgDazhes": 4.0744,
+    "drawDazheRate": 0.0006,
+    "anchor": "历史 57.1%（乘势是当前最强判定卡）",
+    "pass": false
+  },
+  {
+    "experiment": "anchor/法器指定流 vs 无卡",
+    "seed": 11008,
+    "matches": 5000,
+    "sideA": "稳打+法器",
+    "sideB": "稳打·集火残血",
+    "a": {
+      "wins": 3613,
+      "losses": 1387,
+      "matches": 5000,
+      "winrate": 0.7226,
+      "eps": 0.0124,
+      "lo": 0.7102,
+      "hi": 0.735
+    },
+    "avgKillsPerDazhe": 0.9499,
+    "avgDazhes": 4.0656,
+    "drawDazheRate": 0.0008,
+    "anchor": "历史 29%（1AP/件指定获取仍偏弱）",
+    "pass": false
+  },
+  {
+    "experiment": "anchor/换位链·稳打 vs 换位闪避",
+    "seed": 11009,
+    "matches": 5000,
+    "sideA": "稳打·集火残血",
+    "sideB": "换位闪避",
+    "a": {
+      "wins": 3612,
+      "losses": 1388,
+      "matches": 5000,
+      "winrate": 0.7224,
+      "eps": 0.0124,
+      "lo": 0.71,
+      "hi": 0.7348
+    },
+    "avgKillsPerDazhe": 0.2531,
+    "avgDazhes": 4.0362,
+    "drawDazheRate": 0.0005,
+    "anchor": "历史 8.7%（换位克集火）",
+    "pass": false
+  },
+  {
+    "experiment": "anchor/换位链·读换位 vs 换位闪避",
+    "seed": 11010,
+    "matches": 5000,
+    "sideA": "读换位反打",
+    "sideB": "换位闪避",
+    "a": {
+      "wins": 4134,
+      "losses": 866,
+      "matches": 5000,
+      "winrate": 0.8268,
+      "eps": 0.0105,
+      "lo": 0.8163,
+      "hi": 0.8373
+    },
+    "avgKillsPerDazhe": 0.5327,
+    "avgDazhes": 3.9248,
+    "drawDazheRate": 0.0007,
+    "anchor": "历史 78.7%（读换位反打）",
+    "pass": false
+  }
+]
